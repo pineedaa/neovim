@@ -9,7 +9,7 @@ opt.softtabstop = 2
 opt.shiftwidth = 2
 
 -- Line wrapping
-opt.wrap = false
+opt.wrap = true
 
 -- Line numbers
 opt.number = true
@@ -34,3 +34,9 @@ vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", { noremap = true, silent = true 
 vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", { noremap = true, silent = true })
+
+-- Change split size
+vim.keymap.set('n', '<C-Up>', ':resize +2<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-Down>', ':resize -2<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-Left>', ':vertical resize -2<CR>', { noremap = true, silent = true })
