@@ -9,6 +9,12 @@ return {
         vim.keymap.set("n", "{", "<cmd>AerialPrev<CR>", { buffer = bufnr })
         vim.keymap.set("n", "}", "<cmd>AerialNext<CR>", { buffer = bufnr })
       end,
+
+      layout = {
+        max_width = { 80, 0.5 },
+        width = nil,
+        min_width = 20,
+      },
     }
 
     -- You probably also want to set a keymap to toggle aerial
